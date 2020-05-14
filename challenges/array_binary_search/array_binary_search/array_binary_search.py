@@ -1,0 +1,2 @@
+def BinarySearch(array,n):
+    
