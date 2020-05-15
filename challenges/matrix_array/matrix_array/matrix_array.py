@@ -1,6 +1,3 @@
-
-##
-
 def matrix_arr(arr):
     answer=[]
     for x in range(len(arr)):
