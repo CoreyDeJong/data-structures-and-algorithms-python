@@ -1,22 +1,16 @@
 
-##
-
-def insertShiftArray(a,n):
-    x = (len(a)//2)+1
+import math
+def insertShiftArray(array, new_number):
+    middle = (len(array)//2)-1
     
+    
+    answer = []
 
-    for i in range(0, len(a)+1):
-        answer = []
-        if i<x:
-            answer.append(a[i])
-        elif i ==x:
-            answer.append(n)
-        elif i >x:
-            answer.append(a[i-1])
+    for i in range(len(array)):
+        answer.append(array[i])
+        if i == middle:
+            answer.append(new_number)
         i+=1
 
     return answer
 
-
-if __name__ == "__main__":
-    a = int(input())

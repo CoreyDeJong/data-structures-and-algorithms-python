@@ -1,0 +1,19 @@
+# Singly Linked List
+
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+
+## Challenge
+Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
+
+Define a method called __str__ in which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
+"{ a } -> { b } -> { c } -> NULL"
+
+## Approach & Efficiency
+
+The majority of the code is at 0(1) given the assignment and singular complexity, whereas the while loops are at 0(n) due to the length of the linked lists that are used.
+
+## API
+
+insert method takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
+
+includes method takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
