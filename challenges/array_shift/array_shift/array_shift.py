@@ -1,5 +1,5 @@
 
-import math
+
 def insertShiftArray(array, new_number):
     middle = (len(array)//2)-1
     
