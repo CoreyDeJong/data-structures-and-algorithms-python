@@ -1,6 +1,5 @@
 from array_binary_search.array_binary_search import BinarySearch
 
-
 def test_version_even():
     array = [1,2,7,33,45,46,77,78,89]
     n = 77
