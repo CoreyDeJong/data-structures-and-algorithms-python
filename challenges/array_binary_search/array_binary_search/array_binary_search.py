@@ -1,17 +1,20 @@
-def BinarySearch(array,n):
-    arrayLength = len(array)
-    lower_index = 0
-    upper_index = len(array)-1
-    middle = arrayLength//2
+def BinarySearch(array, n):
+        start =0
+        end = len(array)-1
 
-    while n != middle:
-            if n == middle:
-                return middle
-    if middle < n:
-            lower_index = middle +1           
-    elif middle > n:
-            upper_index = middle -1
+        while start <= end:
+                middle = start + (end - start) //2
+                mid_value = array[middle]
 
+                if mid_value == n:
+                        return middle
+                
+                elif n < mid_value:
+                        end = middle -1
+                
+                else:
+                        start = middle +1
+        return -1
 
-# if __name__ == "__main__":
-#     pass
+    
+
