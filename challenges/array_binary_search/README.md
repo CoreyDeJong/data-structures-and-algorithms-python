@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Binary Search
 Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key.
 
@@ -9,3 +10,5 @@ My thought was to focus first on the length of the array given it could vary. Ne
 
 ### Solution
 ![](../../assets/array_binary.jpg)
+=======
+>>>>>>> master
