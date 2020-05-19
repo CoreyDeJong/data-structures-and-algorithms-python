@@ -1,4 +1,4 @@
-import pytest
+# import pytest
 from linked_list.linked_list import LinkedList, Node
 
 ## linkedlist head
@@ -42,7 +42,6 @@ def test_insert_full():
 
 
 #### Includes ####
-# Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 def test_includes_true():
     ll = LinkedList()
@@ -67,20 +66,20 @@ def test_includes_false():
 ####### Appends #############
 
 ## linkedlist
-def test_append():
-    ll = LinkedList()
-    ll.append("apples")
-    ll.append("bananas")
-    assert ll.head.value == "bananas"
-    assert ll.head.next.value == "apples"
+# def test_append():
+#     ll = LinkedList()
+#     ll.append("apples")
+#     ll.append("bananas")
+#     assert ll.head.value == "bananas"
+#     assert ll.head.next.value == "apples"
 
 
 
 ### Error Test ######
 
-def test_node_exception():
-    with pytest.raises(TypeError):
-        Node("sample", "this is NOT a Node")
+# def test_node_exception():
+#     with pytest.raises(TypeError):
+#         Node("sample", "this is NOT a Node")
 
 # test to see if there is a node connected to lucy
 # isinstance(lucy.next, node)
