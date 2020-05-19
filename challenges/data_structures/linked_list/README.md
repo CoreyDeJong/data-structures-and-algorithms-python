@@ -17,3 +17,19 @@ The majority of the code is at 0(1) given the assignment and singular complexity
 insert method takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
 
 includes method takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+
+
+
+# Insert Linked List
+
+Insert nodes before, after and append
+
+## Challenge
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach & Efficiency
+
+The majority of the code is at 0(1) given the assignment and singular complexity, whereas the while loops are at 0(n) due to the length of the linked lists that are used.
+
