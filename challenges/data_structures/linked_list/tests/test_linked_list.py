@@ -42,7 +42,6 @@ def test_insert_full():
 
 
 #### Includes ####
-# Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 def test_includes_true():
     ll = LinkedList()
