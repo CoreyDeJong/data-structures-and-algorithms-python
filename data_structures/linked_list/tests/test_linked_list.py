@@ -1,4 +1,4 @@
-# import pytest
+import pytest
 from linked_list.linked_list import LinkedList, Node
 
 ## linkedlist head
@@ -41,6 +41,35 @@ def test_insert_full():
     assert ll.head.next.value == "apples"
 
 
+#### Append #######
+
+def test_append_1():
+    ll = LinkedList()
+    ll.insert("apples")
+    ll.insert("bananas")
+    ll.append("pineapple")
+    assert str(ll) == "{ bananas } -> { apples } -> { pineapple } -> NULL"
+
+
+#### Insert Before #######
+
+def test_insert_1():
+    ll = LinkedList()
+    ll.insert("apples")
+    ll.insert("bananas")
+    ll.insertBefore("pineapple")
+    assert str(ll) == "{ pineapple } -> { bananas } -> { apples } -> NULL"
+
+#### Insert After #######
+
+def test_insert_1():
+    ll = LinkedList()
+    ll.insert("a")
+    ll.insert("b")
+    ll.insertAfter("b", "c")
+    assert str(ll) == "{ b } -> { c } -> { a } -> NULL"
+
+
 #### Includes ####
 
 def test_includes_true():
@@ -63,30 +92,26 @@ def test_includes_false():
 
 
 
-####### Appends #############
-
-## linkedlist
-# def test_append():
-#     ll = LinkedList()
-#     ll.append("apples")
-#     ll.append("bananas")
-#     assert ll.head.value == "bananas"
-#     assert ll.head.next.value == "apples"
-
-
-
 ### Error Test ######
 
-# def test_node_exception():
-#     with pytest.raises(TypeError):
-#         Node("sample", "this is NOT a Node")
+def test_node_exception():
+    with pytest.raises(TypeError):
+        Node("sample", "this is NOT a Node")
+
+def test_node_exception2():
+    ll = LinkedList()
+    ll.insert("a")
+    ll.insert("b")
+    with pytest.raises(ValueError):
+        ll.insertAfter("f", "c")
+       
 
 # test to see if there is a node connected to lucy
 # isinstance(lucy.next, node)
 
-# @pytest.fixture()
-# def prep_fruit():
-#     ll = LinkedList()
-#     ll.insert("apples")
-#     ll.insert("bananas")
-#     ll.insert("bananas2")
+@pytest.fixture()
+def prep_fruit():
+    ll = LinkedList()
+    ll.insert("apples")
+    ll.insert("bananas")
+    ll.insert("bananas2")
