@@ -1,3 +1,5 @@
 {
-  "tests/test_linked_list.py": true
+  "tests/test_linked_list.py": true, 
+  "tests/test_linked_list.py::test_linked_list_repr": true, 
+  "tests/test_linked_list.py::test_node_exception": true
 }

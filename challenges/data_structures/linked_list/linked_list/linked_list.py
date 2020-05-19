@@ -47,16 +47,38 @@ class LinkedList:
    # 6. Change the next of last node 
         last.next = new_node
 
-# Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
-    def includes(self, value):
 
+
+####### Insert Before #########
+    def insertBefore(self, newVal):
+        new_node = Node(newVal)
+        new_node.next = self.head
+        self.head = new_node 
+
+####### Insert After ###########
+    def insertAfter(self, value, newVal):
         current = self.head
+        while current:
+            if current.value == value:
+                current.next = Node(newVal, current.next)
+                break
+            if current.next == None:
+                raise ValueError("Your value does not exist") 
+            current = current.next
 
+
+
+
+########## Includes ############
+    def includes(self, value):
+        current = self.head
         while current:
             if current.value == value:
                 return True
             current = current.next
         return False
+
+
 
 
  
@@ -67,8 +89,8 @@ class Node:
         self.value = value
         self.next = next_
 
-        # if not isinstance(next_, Node) and next_ != None:
-        #     raise TypeError("Next must be a Node") 
+        if not isinstance(next_, Node) and next_ != None:
+            raise TypeError("Next must be a Node") 
 
     def __repr__(self):
        return f"{self.value} : {self.next}"
