@@ -64,6 +64,18 @@ def test_includes_false():
 
 
 
+####### Appends #############
+
+## linkedlist
+def test_append():
+    ll = LinkedList()
+    ll.append("apples")
+    ll.append("bananas")
+    assert ll.head.value == "bananas"
+    assert ll.head.next.value == "apples"
+
+
+
 ### Error Test ######
 
 def test_node_exception():
@@ -73,9 +85,9 @@ def test_node_exception():
 # test to see if there is a node connected to lucy
 # isinstance(lucy.next, node)
 
-@pytest.fixture()
-def prep_fruit():
-    ll = LinkedList()
-    ll.insert("apples")
-    ll.insert("bananas")
-    ll.insert("bananas2")
+# @pytest.fixture()
+# def prep_fruit():
+#     ll = LinkedList()
+#     ll.insert("apples")
+#     ll.insert("bananas")
+#     ll.insert("bananas2")
