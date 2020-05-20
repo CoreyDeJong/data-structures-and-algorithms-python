@@ -47,8 +47,6 @@ class LinkedList:
    # 6. Change the next of last node 
         last.next = new_node
 
-
-
 ####### Insert Before #########
     def insertBefore(self, newVal):
         new_node = Node(newVal)
@@ -66,9 +64,6 @@ class LinkedList:
                 raise ValueError("Your value does not exist") 
             current = current.next
 
-
-
-
 ########## Includes ############
     def includes(self, value):
         current = self.head
@@ -78,10 +73,57 @@ class LinkedList:
             current = current.next
         return False
 
+############# kth From The End ############
+    # def how_many_nodes(self):
+    #     current = self.head
+    #     num_nodes = 0
+
+    #     while current:
+    #         num_nodes += 1
+    #         current = current.next
+
+    #     return num_nodes
+
+    # def kth_from_end(self, k_value):
+    #     ll_num_nodes = (self.how_many_nodes())
+    #     nodes_to_traverse = ll_num_nodes - k_value
+
+    #     if k_value < 0 : return "The value to search must be greater than 0."
+    #     if 0 > nodes_to_traverse : return "The kth position is greater than the Linkedlist lenght."
+
+    #     current = self.head
+    #     for i in range(0, nodes_to_traverse):
+    #         current = current.next
+
+    #     return current.value
+    def length_of_nodes(self):
+        current_node=self.head
+        total_nodes = 0
+
+        while current_node:
+            total_nodes += 1
+            current_node = current_node.next
+        return total_nodes
+
+
+    def from_end(self, k_length):
+        number_nodes = (self.length_of_nodes())
+        node_length = number_nodes-k_length
+
+        if k_length < 0: 
+            return "k is bigger than length"
+
+        if 0 > node_length:
+            return "k is too big"
+
+        for i in range(node_length):
+            current_node = current_node.next
+        
+        return current_node.value
 
 
 
- 
+
 # Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node
 class Node:
 

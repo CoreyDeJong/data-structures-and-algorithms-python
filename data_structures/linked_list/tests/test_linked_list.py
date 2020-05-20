@@ -90,6 +90,17 @@ def test_includes_false():
     expected = False
     assert actual == expected
 
+#### K from End ###########
+
+def test_too_big(node_length):
+    actual = node_length.from_end(8)
+    expected = "k is too big"
+    assert actual == expected
+
+# def test_same_length(node_length):
+#     actual = node_length.from_end(4)
+#     expected = "Four"
+#     assert actual == expected
 
 
 ### Error Test ######
@@ -115,3 +126,12 @@ def prep_fruit():
     ll.insert("apples")
     ll.insert("bananas")
     ll.insert("bananas2")
+
+@pytest.fixture
+def node_length():
+    ll = LinkedList()
+    ll.insert("One")
+    ll.insert("Two")
+    ll.insert("Three")
+    ll.insert("Four")
+    return ll
