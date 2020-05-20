@@ -47,8 +47,6 @@ class LinkedList:
    # 6. Change the next of last node 
         last.next = new_node
 
-
-
 ####### Insert Before #########
     def insertBefore(self, newVal):
         new_node = Node(newVal)
@@ -66,9 +64,6 @@ class LinkedList:
                 raise ValueError("Your value does not exist") 
             current = current.next
 
-
-
-
 ########## Includes ############
     def includes(self, value):
         current = self.head
@@ -78,10 +73,6 @@ class LinkedList:
             current = current.next
         return False
 
-
-
-
- 
 # Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node
 class Node:
 
