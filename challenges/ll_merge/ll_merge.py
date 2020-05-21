@@ -27,8 +27,10 @@ class LinkedList:
         total_length = list1_length+list2_length
 
         while i in (total_length+1):
-            mergedList.append(list1[i])
-            mergedList.append(List2[i])
+            if list1[i]>0:
+                mergedList.append(list1[i])
+            if list2[i]>0:
+                mergedList.append(List2[i])
         return mergedList
 
 
