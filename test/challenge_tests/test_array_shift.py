@@ -1,4 +1,3 @@
-
 from array_shift.array_shift import insertShiftArray
 
 def test_shift_even_array():

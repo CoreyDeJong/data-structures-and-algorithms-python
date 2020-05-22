@@ -1,5 +1,5 @@
-# import pytest
-from dsa/challenges/ll_merge/__pycache__/ll_merge.cpython-38.pyc import LinkedList, Node
+import pytest
+from challenges.ll_merge.__pycache__.ll_merge import LinkedList, Node
 
 
 ### ll Merge #####
