@@ -1,5 +1,5 @@
-import pytest
-from linked_list.linked_list import LinkedList, Node
+# import pytest
+from dsa.data_structures.linked_list.linked_list import LinkedList, Node
 
 ## linkedlist head
 def test_instance():
