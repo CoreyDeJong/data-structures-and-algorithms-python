@@ -15,7 +15,7 @@ includes method takes any value as an argument and returns a boolean result depe
 
 
 
-# Insert Linked List
+# Append, Insert Berfore and After
 Insert nodes before, after and append
 
 ## Challenge
@@ -24,8 +24,12 @@ Insert nodes before, after and append
 ## Approach & Efficiency
 The majority of the code is at 0(1) given the assignment and singular complexity, whereas the while loops are at 0(n) due to the length of the linked lists that are used.
 
+## Solution
+[Append, Insert Before After](../../assets/append_insert_before_after.jpg)
 
-# Challenge Summary
+
+
+# Kth Number from the end
 Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
 
 ## Challenge Description
