@@ -118,6 +118,7 @@ class LinkedList:
 
         for i in range(node_length):
             current_node = current_node.next
+            i+=1
         
         return current_node.value
 
