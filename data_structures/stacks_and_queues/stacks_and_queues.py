@@ -36,3 +36,15 @@ class Queue():
         return self.storage[-1]
     def is_empty(self):
         return len(self.storage)==0
+
+
+class Node():
+    def __init__(self, value, next_=None):
+        self.value = value
+        self.next = next_
+
+        if not isinstance(next_, Node) and next_ != None:
+            raise TypeError("Next must be a Node")
+
+    def __repr__(self):
+       return f"{self.value} : {self.next}"
