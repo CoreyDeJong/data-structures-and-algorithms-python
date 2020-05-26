@@ -1,41 +1,115 @@
 from collections import deque
 
-
+# referenced multiple internet sites for examples
 
 class Stack():
     def __init__(self):
-        self.storage = []
-    def push(self, item):
-        self.storage.append(item)
+        self.top = None
+
+    def __repr__(self):
+        return f"Top is {self.top}"
+
+    def push(self, value):
+        new_node = Node(value, self.top)
+        self.top = new_node
+
+
     def pop(self):
-        if not self.is_empty():
-            return self.storage.pop()
+        if self.top == None:
+            raise Exception ("empty stack")
+
         else:
-            return "empty stack"
-    def is_empty(self):
-        return not len(self.storage)
-        # if len(self.storage) == 0:
-        #     return True
-        # return False
+            pop_node = self.top
+            self.top = self.top.next
+            pop_node.next = None
+            return pop_node.value
+
+
+
     def peek(self):
-        if not self.is_empty():
-            return self.storage[-1]
+        if self.top != None:
+            return self.top.value
         else:
             return "empty stack"
 
+    def is_empty(self):
+        if self.top == None:
+            return True
+        else:
+            return False
 
 
 class Queue():
     def __init__(self):
-        self.storage = deque()
-    def enqueue(self, item):
-        self.storage.appendleft(item) #O(1)
+        self.front = None
+        self.rear = None
+
+    def enqueue(self, value):
+        new_node = Node(value)
+
+        if self.rear == None:
+            self.front = new_node
+            self.rear = self.front
+        else:
+            self.rear.next = new_node
+            self.rear = self.rear.next
+
     def dequeue(self):
-        return self.storage.pop()
+        if self.front != None:
+            temp_node = self.front
+            self.front = self.front.next
+            temp_node.next = None
+            return temp_node.value
+        else:
+            return "empty queue"
+
     def peek(self):
-        return self.storage[-1]
+        if self.front != None:
+            return self.front.value
+        else:
+            return "empty queue"
+
     def is_empty(self):
-        return len(self.storage)==0
+        if self.front == None:
+            return True
+        else:
+            return False
+
+
+
+
+
+
+
+
+
+
+
+    # def __init__(self):
+    #     self.storage = deque()
+    # def enqueue(self, item):
+    #     self.storage.appendleft(item) #O(1)
+    # def dequeue(self):
+    #     return self.storage.pop()
+    # def peek(self):
+    #     return self.storage[-1]
+    # def is_empty(self):
+    #     return len(self.storage)==0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class Node():
@@ -48,3 +122,5 @@ class Node():
 
     def __repr__(self):
        return f"{self.value} : {self.next}"
+
+

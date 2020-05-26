@@ -12,8 +12,15 @@ Define a method called peek that does not take an argument and returns the value
 Should raise exception when called on empty stack
 Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the stack is empty.
 
-<!-- ### Approach & Efficiency
-My thought was to focus first on the length of the array given it could vary. Next was to take that length and divide in half to find the index to determine if the value was equal, less than or greater than the middle. Next would continue this logic redefining the lowest the upper integers, comparing to the middle integer.
+### Approach & Efficiency
+O(1) was achieved given the use of single functions, without any loops or duplicating lists
 
 ### API
 
+- push(self, item): Takes in any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
+- pop(self): Takes no arguments, removes the node from the top of the stack, and returns the node's value. Will raise an exception when called on an empty stack.
+- peek(self): Takes no arguments and returns the value of the node located on top of the stack, without removing it from the stack.
+- is_empty(self): Takes no arguments, and returns a boolean indicating whether or not the stack is empty.
+- enqueue(self, item): Takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time Performance.
+- dequeue(self): Takes no arguments, remove the node from the front of the queue, and returns the node's value.
+- peek(self): Takes no arguments and returns the value of the node located in the front of the queue, without removing it from the queue.
