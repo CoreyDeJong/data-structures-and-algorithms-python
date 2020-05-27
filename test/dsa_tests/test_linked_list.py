@@ -1,5 +1,5 @@
-# import pytest
-from data_structures.linked_list.linked_list import LinkedList, Node
+import pytest
+from dsa.data_structures.linked_list.linked_list.linked_list import LinkedList, Node
 
 ## linkedlist head
 def test_instance():
@@ -62,7 +62,7 @@ def test_insert_1():
 
 #### Insert After #######
 
-def test_insert_1():
+def test_insert_2():
     ll = LinkedList()
     ll.insert("a")
     ll.insert("b")
@@ -115,7 +115,7 @@ def test_node_exception2():
     ll.insert("b")
     with pytest.raises(ValueError):
         ll.insertAfter("f", "c")
-       
+
 
 # test to see if there is a node connected to lucy
 # isinstance(lucy.next, node)
