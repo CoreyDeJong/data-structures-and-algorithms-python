@@ -16,22 +16,26 @@ def test_enqueue():
     pseudo.enqueue(10)
     pseudo.enqueue(5)
     expected = 5
-    actual = pseudo.stack1.peek()
+    actual = pseudo.inbox.peek()
     assert actual == expected
 
 
 
 
 
-# def test_dequeue():
-#     pseudo = PseudoQueue()
-#     pseudo.enqueue(20)
-#     pseudo.enqueue(15)
-#     pseudo.enqueue(10)
-#     pseudo.enqueue(5)
-#     expected = 5
-#     actual =
-#     assert actual == expected
+
+
+
+
+def test_dequeue():
+    pseudo = PseudoQueue()
+    pseudo.enqueue(20)
+    pseudo.enqueue(15)
+    pseudo.enqueue(10)
+    pseudo.enqueue(5)
+    expected = 5
+    actual = pseudo.dequeue(5)
+    assert actual == expected
 
 
 

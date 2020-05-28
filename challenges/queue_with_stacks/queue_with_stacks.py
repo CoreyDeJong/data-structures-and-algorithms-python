@@ -52,17 +52,45 @@ class Stack():
 
 class PseudoQueue():
     def __init__(self):
-        self.stack1 = Stack()
-        self.stack2 = Stack()
+        # self.stack1 = Stack()
+        # self.stack2 = Stack()
+        self.inbox = Stack()
+        self.outbox = Stack()
+
+
 
     def enqueue(self, value):
-        self.stack1.push(value)
+        # self.stack1.push(value)
+
+        while self.outbox != None:
+            self.inbox.push(self.outbox.pop())
+        self.inbox.push(value)
+
+# dequeue does not take any arguments?
+    def dequeue(self):
+
+        while self.inbox != None:
+            value = self.inbox.pop()
+            self.outbox.push(value)
 
 
-    def dequeue(self, value):
-        while self.stack1 != None:
-            self.stack2.push(self.stack1.pop())
-        return self.stack2.pop()
-        pass
+        if self.outbox == None:
+
+
+            # outgoing value is already being used
+            outgoing = self.outbox.pop()
+            return outgoing
+
+
+
+
+
+
+
+        #### Original attempt#####
+        # while self.stack1 != None:
+        #     self.stack2.push(self.stack1.pop())
+        # return self.stack2.pop()
+        # pass
 
 
