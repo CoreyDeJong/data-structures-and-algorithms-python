@@ -1,4 +1,4 @@
-## Queue with Stacks
+## FIFO Animal Shelter
 Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
 Implement the following methods:
 enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
