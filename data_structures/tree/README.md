@@ -11,9 +11,11 @@ Define a method named add that accepts a value, and adds a new node with that va
 Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
 ## Approach & Efficiency
-<!-- Vig and I collaborated on the approach to this challenge, attached is the shared whiteboad document we created, but our code was independently created.
+Efficiency is O(n^2) given the loops to iterate through the input.
 
-Efficiency is O(n^2) given the loops to iterate through the input. -->
+## API
+BinaryTree Class:
+ - Pre-Order: depth first traversal order of root >> left >> right
+ - In-Order: depth first traversal order of left >> root >> right
+ - Post-Order: depth first traversal order of left >> right >> root
 
-## Solution
-![](../../assets/tree.PNG)
