@@ -24,8 +24,9 @@
 - [Enqueue and Dequeue](challenges/fifo_animal_shelter/README.md)
 <!-- 13 -->
 - [Multi Bracket Validation](challenges/multi_bracket_validation/README.md)
-<!-- 14 -->
+<!-- 14 Peer Whiteboard interview that was not required -->
 <!-- 15 -->
+- [Tree](data_structures/tree/README.md)
 <!-- 16 -->
 <!-- 17 -->
 <!-- 18 -->
