@@ -1,5 +1,5 @@
 import pytest
-from dsa.data_structures.linked_list.linked_list.linked_list import LinkedList, Node
+from linked_list.linked_list import LinkedList, Node
 
 ## linkedlist head
 def test_instance():
@@ -90,17 +90,39 @@ def test_includes_false():
     expected = False
     assert actual == expected
 
-#### K from End ###########
-
+#### Kth from End ###########
+# test 1
 def test_too_big(node_length):
     actual = node_length.from_end(8)
     expected = "k is too big"
     assert actual == expected
 
-# def test_same_length(node_length):
-#     actual = node_length.from_end(4)
-#     expected = "Four"
-#     assert actual == expected
+# test 2
+def test_same_length(node_length):
+    actual = node_length.from_end(4)
+    expected = 4
+    assert actual == expected
+
+# test 3
+def test_negative(node_length):
+    actual = node_length.from_end(-2)
+    expected = "k is bigger than length"
+    assert actual == expected
+
+# test 4
+def test_same_length():
+    ll = LinkedList()
+    ll.insert(1)
+    return ll
+    actual = from_end(1)
+    expected = 1
+    assert actual == expected
+
+# Test 5
+def test_some_middle(node_length):
+    actual = node_length.from_end(2)
+    expected = 2
+    assert actual == expected
 
 
 ### Error Test ######
@@ -117,8 +139,8 @@ def test_node_exception2():
         ll.insertAfter("f", "c")
 
 
-# test to see if there is a node connected to lucy
-# isinstance(lucy.next, node)
+
+######################
 
 @pytest.fixture()
 def prep_fruit():
@@ -130,8 +152,8 @@ def prep_fruit():
 @pytest.fixture
 def node_length():
     ll = LinkedList()
-    ll.insert("One")
-    ll.insert("Two")
-    ll.insert("Three")
-    ll.insert("Four")
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
     return ll

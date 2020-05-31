@@ -1,5 +1,5 @@
 class LinkedList:
-    
+
     def __init__(self, value=None):
         self.head = None
         # self.insert(value)
@@ -15,7 +15,7 @@ class LinkedList:
             current = current.next
 
         return res + "NULL"
-        
+
     def insert(self, value):
 
         self.head = Node(value, self.head)
@@ -23,18 +23,18 @@ class LinkedList:
 
 # used code from geeksforgeeks.org given I couldn't get my file to run tests
 
-#This function is defined in Linked List class 
-# Appends a new node at the end.  This method is 
+#This function is defined in Linked List class
+# Appends a new node at the end.  This method is
 #  defined inside LinkedList class shown above */
     def append(self, value):
 
-    # 1. Create a new node 
-   # 2. Put in the data 
+    # 1. Create a new node
+   # 2. Put in the data
    # 3. Set next as None
         new_node = Node(value)
 
- # 4. If the Linked List is empty, then make the 
-   #    new node as head 
+ # 4. If the Linked List is empty, then make the
+   #    new node as head
         if self.head is None:
             self.head = new_node
             return
@@ -44,14 +44,14 @@ class LinkedList:
         while(last.next):
             last = last.next
 
-   # 6. Change the next of last node 
+   # 6. Change the next of last node
         last.next = new_node
 
 ####### Insert Before #########
     def insertBefore(self, newVal):
         new_node = Node(newVal)
         new_node.next = self.head
-        self.head = new_node 
+        self.head = new_node
 
 ####### Insert After ###########
     def insertAfter(self, value, newVal):
@@ -61,7 +61,7 @@ class LinkedList:
                 current.next = Node(newVal, current.next)
                 break
             if current.next == None:
-                raise ValueError("Your value does not exist") 
+                raise ValueError("Your value does not exist")
             current = current.next
 
 ########## Includes ############
@@ -110,16 +110,17 @@ class LinkedList:
         number_nodes = (self.length_of_nodes())
         node_length = number_nodes-k_length
 
-        if k_length < 0: 
+        if k_length < 0:
             return "k is bigger than length"
 
         if 0 > node_length:
             return "k is too big"
 
+        current_node=self.head
         for i in range(node_length):
             current_node = current_node.next
             i+=1
-        
+
         return current_node.value
 
 
@@ -133,7 +134,7 @@ class Node:
         self.next = next_
 
         if not isinstance(next_, Node) and next_ != None:
-            raise TypeError("Next must be a Node") 
+            raise TypeError("Next must be a Node")
 
     def __repr__(self):
        return f"{self.value} : {self.next}"
