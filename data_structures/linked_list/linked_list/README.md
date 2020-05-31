@@ -39,4 +39,4 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 The majority of the code is at 0(1) given the assignment and singular complexity, whereas the for loop is at 0(n) due to the length of the linked lists that are used.
 
 ## Solution
-[link list k](../../assets/link_list_k.jpg)
+[link list k](../../../assets/link_list_k.jpg)
