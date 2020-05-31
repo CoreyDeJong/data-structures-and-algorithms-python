@@ -19,3 +19,6 @@ BinaryTree Class:
  - In-Order: depth first traversal order of left >> root >> right
  - Post-Order: depth first traversal order of left >> right >> root
 
+BinarySearchTree Class:
+ - Add method
+ - Contains method
