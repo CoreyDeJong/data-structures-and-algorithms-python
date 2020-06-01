@@ -3,22 +3,25 @@ class BinaryTree:
         self.root = None
 
     def pre_order(self):
+        #root, left, right
         output = []
 
-        def walk(node):
-            if not node:
+        def walk(root):
+            # base case that prevents something you don't want to get into the code
+            if not root:
                 return
             # deal with root
-            output.append(node.value)
+            output.append(root.value)
             # check the left sub-tree
-            walk(node.left)
+            walk(root.left)
             # check the right sub-tree
-            walk(node.right)
+            walk(root.right)
         walk(self.root)
 
         return output
 
     def in_order(self):
+        #left, root, right
         output = []
 
         def walk(node):
@@ -35,6 +38,7 @@ class BinaryTree:
         return output
 
     def post_order(self):
+        # left, right, root
         output = []
 
         def walk(node):
@@ -110,6 +114,9 @@ class Node:
         self.left = left
         self.right = right
 
+    # this will show the object as a string
+    def __str__(self):
+        return f"Node: {self.value}"
 
 # bst = BinarySearchTree()
 # bst.add(4)
@@ -121,4 +128,25 @@ class Node:
 # bst.add(-1)
 # print(bst.pre_order())
 # print(bst.contains(30))
+
+# Manual Add to BinaryTree/Node creation
+# if __name__ =="__main__"
+#     tree = BinaryTree()
+#     apples = Node("apples")
+#     tree.root = apples
+#     bananas = Node("bananas")
+#     apples.left = bananas
+#     cucumbers = Node("cucumbers")
+#     apples.right =cucumbers
+#     print(apples)
+
+#     output = tree.pre_order()
+#     assert output == ("apples", "bananas", "cucumber")
+
+    # output = tree.pre_order()
+#     assert output == ("apples", "bananas", "cucumber"), output
+
+#     assert tree.root.value = "apples"
+#     assert tree.left.value = "bananas"
+#     assert tree.right.value = "cucumbers"
 
