@@ -71,16 +71,16 @@ def test_postorder():
     assert actual == expected
 
 
-# # Test 7 - contains
-# def test_contains():
-#     bst = BinarySearchTree()
-#     bst.add(4)
-#     bst.add(7)
-#     bst.add(5)
-#     bst.add(9)
-#     bst.add(2)
-#     bst.add(30)
-#     bst.add(-1)
-#     expected = True
-#     actual = bst.contains(4)
-#     assert actual == expected
+# Test 7 - contains
+def test_contains():
+    bst = BinarySearchTree()
+    bst.add(4)
+    bst.add(7)
+    bst.add(5)
+    bst.add(9)
+    bst.add(2)
+    bst.add(30)
+    bst.add(-1)
+    expected = True
+    actual = bst.contains(5)
+    assert actual == expected

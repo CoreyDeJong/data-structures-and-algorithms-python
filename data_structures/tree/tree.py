@@ -84,29 +84,17 @@ class BinarySearchTree(BinaryTree):
         walk(self.root, Node(value))
 
 
-    # def contains(self, value):
-    #     output = []
+    def contains(self, value):
 
-    #     def walk(node):
-    #         if not node:
-    #             return
-    #         # deal with root
-    #         output.append(node.value)
-    #         # check the left sub-tree
-    #         walk(node.left)
-    #         # check the right sub-tree
-    #         walk(node.right)
-    #     walk(self.root)
+        output = self.pre_order()
 
-    #     # return output
-
-    #     for i in (len(output)):
-    #         if value == output[i]:
-    #             return True
-    #         else:
-    #             return False
+        if value in output:
+            return True
+        return False
 
 
+
+ 
 
 class Node:
     def __init__(self, value, left=None, right=None):
