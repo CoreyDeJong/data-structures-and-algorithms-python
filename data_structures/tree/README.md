@@ -20,5 +20,5 @@ BinaryTree Class:
  - Post-Order: depth first traversal order of left >> right >> root
 
 BinarySearchTree Class:
- - Add method
- - Contains method
+ - Add method will create a node and add it to the tree
+ - Contains method will query the tree and return True or False if the value is within the Tree.
