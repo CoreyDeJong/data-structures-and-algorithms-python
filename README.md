@@ -28,6 +28,7 @@
 <!-- 15 -->
 - [Tree](data_structures/tree/README.md)
 <!-- 16 -->
+- [Fizz Buzz Tree](challenges/fizz_buzz_tree/README.md)
 <!-- 17 -->
 <!-- 18 -->
 <!-- 19 -->
