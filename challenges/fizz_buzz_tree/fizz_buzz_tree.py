@@ -55,9 +55,10 @@ class BinaryTree:
         return output
 
 
-
+## input is a tree
 def FizzBuzzTree(tree):
 
+    ## output is a new tree
     output = []
     def walk(root):
         str_return = ""
@@ -73,6 +74,7 @@ def FizzBuzzTree(tree):
             str_return =  'Buzz'
         else:
             str_return = root.value
+            # return str_return or str(root)? to adjust the value to a string?
 
         # return str(num)
         output.append(str_return)
