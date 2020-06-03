@@ -22,3 +22,17 @@ BinaryTree Class:
 BinarySearchTree Class:
  - Add method will create a node and add it to the tree
  - Contains method will query the tree and return True or False if the value is within the Tree.
+
+
+ # Breadth-first Traversal
+Write a breadth first traversal method which takes a Binary Tree as its unique input.
+
+
+## Challenge Description
+Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+## Approach & Efficiency
+Efficiency is O(n^2) given the loops to iterate through the tree.
+
+## Solution
+[Breadth First Traversal](../../assets/breadth_first_traversal.jpg)
