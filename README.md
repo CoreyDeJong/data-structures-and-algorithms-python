@@ -30,6 +30,7 @@
 <!-- 16 -->
 - [Fizz Buzz Tree](challenges/fizz_buzz_tree/README.md)
 <!-- 17 -->
+[Breadth-first Traversal](challenges/breadth_first_traversal/README.md)
 <!-- 18 -->
 <!-- 19 -->
 <!-- 20 -->
