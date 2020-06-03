@@ -54,6 +54,81 @@ class BinaryTree:
 
         return output
 
+    def breadth_first(self,tree):
+
+        items = []
+
+        breadth = Queue()
+
+        # add root queue
+        breadth.enqueue(tree.root)
+
+        # while queue is not empty
+        while not breadth.is_empty():
+
+            # dequeue it
+            front = breadth.dequeue()
+
+            if not front:
+                return
+            # do what you need with the front/current ?
+            items.append(front.value)
+
+            # check front left and enqueue if it exists
+            if front.left:
+                breadth.enqueue(front.left)
+
+            #check front right and enqueue as needed
+            if front.right:
+                breadth.enqueue(front.right)
+
+        return items
+
+    def add(self, value):
+
+        def walk(node, node_to_add):
+
+            # if not node:
+            #     return
+
+            if node_to_add.value < node.value:
+                # go to the left
+                if not node.left:
+                    node.left = node_to_add
+                else:
+                    walk(node.left, node_to_add)
+            else:
+                # got to the right
+                if not node.right:
+                    node.right = node_to_add
+                else:
+                    walk(node.right, node_to_add)
+
+
+        if not self.root:
+            self.root = Node(value)
+            return
+
+        walk(self.root, Node(value))
+
+
+class Queue:
+    def __init__(self):
+        self.storage = dequeue()
+
+    def enqueue(self,value):
+        self.storage.appendleft(value)
+
+    def dequeue(self):
+        return self.storage.pop()
+
+    def peek(self):
+        return self.storage[-1]
+
+    def is_empty(self):
+        return len(self.storage) == 0
+
+
 
 class BinarySearchTree(BinaryTree):
     def add(self, value):
@@ -94,13 +169,14 @@ class BinarySearchTree(BinaryTree):
 
 
 
- 
+
 
 class Node:
-    def __init__(self, value, left=None, right=None):
+    def __init__(self, value, left=None, right=None, next=None):
         self.value = value
         self.left = left
         self.right = right
+        self.next = next
 
     # this will show the object as a string
     def __str__(self):
@@ -118,15 +194,29 @@ class Node:
 # print(bst.contains(30))
 
 # Manual Add to BinaryTree/Node creation
-# if __name__ =="__main__"
-#     tree = BinaryTree()
-#     apples = Node("apples")
-#     tree.root = apples
-#     bananas = Node("bananas")
-#     apples.left = bananas
-#     cucumbers = Node("cucumbers")
-#     apples.right =cucumbers
-#     print(apples)
+if __name__ =="__main__":
+    bt = BinaryTree()
+    bt.add(4)
+    bt.add(7)
+    bt.add(5)
+    bt.add(9)
+    bt.add(2)
+    bt.add(30)
+    bt.add(-1)
+    print(bt.breadth_first())
+
+
+
+
+
+    # tree = BinaryTree()
+    # apples = Node("apples")
+    # tree.root = apples
+    # bananas = Node("bananas")
+    # apples.left = bananas
+    # cucumbers = Node("cucumbers")
+    # apples.right =cucumbers
+    # print(apples)
 
 #     output = tree.pre_order()
 #     assert output == ("apples", "bananas", "cucumber")

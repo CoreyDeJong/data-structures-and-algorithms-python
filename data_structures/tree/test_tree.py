@@ -1,6 +1,6 @@
 import pytest
 
-from tree import Node, BinarySearchTree, BinaryTree
+from tree import Node, BinarySearchTree, BinaryTree, Queue
 
 def test_create_node():
     one = Node(1)
@@ -83,4 +83,20 @@ def test_contains():
     bst.add(-1)
     expected = True
     actual = bst.contains(5)
+    assert actual == expected
+
+# code17 - Breadth
+
+def test_breadth():
+    bt = BinaryTree()
+    bst = BinarySearchTree()
+    bt.add(4)
+    bt.add(7)
+    bt.add(5)
+    bt.add(9)
+    bt.add(2)
+    bt.add(30)
+    bt.add(-1)
+    actual = bt.breadth_first()
+    expected = [4,7,5,9,2,30,-1]
     assert actual == expected
