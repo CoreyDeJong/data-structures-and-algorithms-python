@@ -32,6 +32,7 @@
 <!-- 17 -->
 [Breadth-first Traversal](challenges/breadth_first_traversal/README.md)
 <!-- 18 -->
+[Find Maximum Value](challenges/find_maximum_value/README.md)
 <!-- 19 -->
 <!-- 20 -->
 <!-- 21 -->
