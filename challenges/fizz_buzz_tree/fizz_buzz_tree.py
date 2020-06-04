@@ -60,7 +60,7 @@ def FizzBuzzTree(tree):
 
     ## output is a new tree
     output = []
-    def walk(root):
+    def traverse(root):
         str_return = ""
         # base case that prevents something you don't want to get into the code
         if not root:
@@ -79,10 +79,10 @@ def FizzBuzzTree(tree):
         # return str(num)
         output.append(str_return)
         # check the left sub-tree
-        walk(root.left)
+        traverse(root.left)
         # check the right sub-tree
-        walk(root.right)
-    walk(tree.root)
+        travers(root.right)
+    traverse(tree.root)
 
     return output
 
