@@ -117,7 +117,7 @@ class BinaryTree:
 
     def find_maximum_value(self):
 
-        max_value = 0
+        max_value = node.value
 
         def walk(root, max_value):
 
