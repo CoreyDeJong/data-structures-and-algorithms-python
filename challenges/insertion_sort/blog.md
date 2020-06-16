@@ -1,5 +1,7 @@
 ## Insertion Sort
 
+<!-- Used a common sense guide to data structures and algorithms as source for conent on this page -->
+
 ### Pass 1
 [Insertion_Sort_Pass1](../../assets/insertion_sort/insertion_sort_pass1.jpg)
 

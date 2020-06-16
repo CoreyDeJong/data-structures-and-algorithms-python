@@ -33,12 +33,5 @@
 [Breadth-first Traversal](challenges/breadth_first_traversal/README.md)
 <!-- 18 -->
 [Find Maximum Value](challenges/find_maximum_value/README.md)
-<!-- 19 -->
-<!-- 20 -->
-<!-- 21 -->
-<!-- 22 -->
-<!-- 23 -->
-<!-- 24 -->
-<!-- 25 -->
 <!-- 26 -->
 [Insertion Sort](challenges/insertion_sort/README.md)

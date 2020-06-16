@@ -1,6 +1,7 @@
+<!-- Used a common sense guide to data structures and algorithms as source for conent on this page -->
+
 # Insertion Sort
 Write a function called InsertionSort that takes in an array and return a sorted array.
-
 
 ## Challenge Description
 Use the insertion sort process
