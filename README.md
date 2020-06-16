@@ -40,3 +40,5 @@
 <!-- 23 -->
 <!-- 24 -->
 <!-- 25 -->
+<!-- 26 -->
+[Insertion Sort](challenges/insertion_sort/README.md)
