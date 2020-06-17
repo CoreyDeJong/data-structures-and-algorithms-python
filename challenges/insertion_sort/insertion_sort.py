@@ -1,4 +1,4 @@
-def insertion_sort(arr):
+# def insertion_sort(arr):
     for i in range(len(arr)):
         j = i-1
         temp = arr[i]

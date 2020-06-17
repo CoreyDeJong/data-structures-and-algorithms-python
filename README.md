@@ -35,3 +35,5 @@
 [Find Maximum Value](challenges/find_maximum_value/README.md)
 <!-- 26 -->
 [Insertion Sort](challenges/insertion_sort/README.md)
+<!-- 27 -->
+[Merge Sort](challenges/merge_sort/README.md)
