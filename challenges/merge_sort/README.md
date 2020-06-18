@@ -1,6 +1,6 @@
 <!-- Used a geeks for geeks code and visual to complete this code challenge -->
 
-# Insertion Sort
+# Merge Sort
 Write a function called Merge Sort that takes in an array and returns a sorted array.
 
 ## Challenge Description

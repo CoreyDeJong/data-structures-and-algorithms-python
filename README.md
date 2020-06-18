@@ -37,3 +37,5 @@
 [Insertion Sort](challenges/insertion_sort/README.md)
 <!-- 27 -->
 [Merge Sort](challenges/merge_sort/README.md)
+<!-- 28 -->
+[Quick Sort](challenges/quick_sort/README.md)
