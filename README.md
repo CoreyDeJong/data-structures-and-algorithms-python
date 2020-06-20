@@ -37,3 +37,5 @@
 [Insertion Sort](challenges/insertion_sort/README.md)
 <!-- 27 -->
 [Merge Sort](challenges/merge_sort/README.md)
+<!-- 30 -->
+- [Hash Tables](data_structures/hashtable/README.md)
