@@ -30,12 +30,14 @@
 <!-- 16 -->
 - [Fizz Buzz Tree](challenges/fizz_buzz_tree/README.md)
 <!-- 17 -->
-[Breadth-first Traversal](challenges/breadth_first_traversal/README.md)
+- [Breadth-first Traversal](challenges/breadth_first_traversal/README.md)
 <!-- 18 -->
-[Find Maximum Value](challenges/find_maximum_value/README.md)
+- [Find Maximum Value](challenges/find_maximum_value/README.md)
 <!-- 26 -->
-[Insertion Sort](challenges/insertion_sort/README.md)
+- [Insertion Sort](challenges/insertion_sort/README.md)
 <!-- 27 -->
-[Merge Sort](challenges/merge_sort/README.md)
+- [Merge Sort](challenges/merge_sort/README.md)
 <!-- 30 -->
 - [Hash Tables](data_structures/hashtable/README.md)
+<!-- 31 -->
+- [Repeated Word](challenges/repeated_word/README.md)
