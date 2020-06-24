@@ -41,3 +41,6 @@
 - [Hash Tables](data_structures/hashtable/README.md)
 <!-- 31 -->
 - [Repeated Word](challenges/repeated_word/README.md)
+<!-- 32 -->
+- [Tree Intersection](data_structures/tree_intersection/README.md)
+
