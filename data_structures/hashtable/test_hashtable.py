@@ -39,5 +39,34 @@ def test_contains_false():
 # hashmap.get('corey')
 # this will return '37'
 
+##### Left Join #######
+def test_demo1():
+
+    hashmap1 = {
+        'fond' : 'enamored',
+        'wrath' : 'anger',
+        'diligent' : 'employed',
+        'outfil' : 'garb',
+        'guide' : 'usher',
+    }
+
+    hashmap2 = {
+        'fond' : 'averse',
+        'wrath' : 'delight',
+        'diligent' : 'idle',
+        'guide' : 'follow',
+        'flow' : 'jam',
+    }
+
+    actual = left_join_hashtable(hashmap1, hashmap2)
+    expected = [
+        ['fond', 'enamored', 'averse'],
+        ['wrath', 'anger', 'delight'],
+        ['diligent', 'employed', 'idle'],
+        ['outfil', 'garb', None],
+        ['guide', 'usher', 'follow']
+    ]
+    assert actual == expected
+
 
 

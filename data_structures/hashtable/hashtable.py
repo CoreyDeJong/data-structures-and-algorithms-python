@@ -8,6 +8,8 @@ class Hashmap:
         self.size=size
         self.map = [None]*self.size
 
+
+
     def hash(self, key):
         #split the key into individual characters
         # convert characters to ascii
@@ -44,18 +46,20 @@ class Hashmap:
 
 
     def get(self,key):
-        # uses hash function to take in a key as a string and create the hashed key integer
+        ## code help from geeksforgeeks
         hashed_key = self.hash(key)
 
-        # take the hashed key integer and make the variable something equal to what is at that hash_key index
-        something = self.map[hashed_key]
-        return something.display()
+        if self.map[hashed_key]:
+            ll = self.map[hashed_key]
 
-        # if there are multiple key:values at an index, loop through the linked list of key:values to find the correct value of the given key
+            while ll.head:
+                if ll.head.data[0] == key:
+                    return ll.head.data[1]
+                else:
+                    ll.head = ll.head.next
+        else:
+            return None
 
-        #1 is there more than one thing at the hash-index
-            # - lenght of hash
-            # - node.next value != 0
 
 
 
@@ -68,17 +72,31 @@ class Hashmap:
         else:
             return False
 
+## collaborated with Vij on this code
+def left_join_hashtable(table1, table2):
+    # print("this is table1", table1)
+    # print("this is table2", table2)
+    output = []
+    #iterate over the table1
+    for i in range(len(table1.map)):
+        #check for match in table2 at these spots
+        if table1.map[i] and table2.map[i]:
+            # print(table1.map[i],table2.map[i])
+            output.append(table1.map[i])
+            output.append(table2.map[i])
+        elif table1.map[i]:
+            # print(table1.map[i])
+            output.append(table1.map[i])
 
 
+    return output
 
 
-# if __name__ == "__main__":
-#      hashmap = Hashmap(1024)
-#      hashmap.add('ahmad', 30)
-#      hashmap.add('silent', True)
-#      hashmap.add('listen', 'To me')
-#      hashmap.add('lestin', 'Random stuff')
-#      hashmap.add('JB', 27)
-#      for item in hashmap.map:
-#          if item:
-#                  print(item.display())
+if __name__ == "__main__":
+    table1 = Hashmap(10)
+    table2 = Hashmap(10)
+    table1.add("JB",27)
+    table1.add("Vij",32)
+    table2.add("JB", 55)
+    table2.add("Corey",12)
+    left_join_hashtable(table1, table2)
