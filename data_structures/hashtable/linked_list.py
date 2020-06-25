@@ -7,9 +7,6 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    # def __repr__(self):
-    #     return self
-
     def add(self, data):
         node = Node(data)
 
@@ -31,3 +28,12 @@ class LinkedList:
             values.append(current.data)
             current = current.next
         return values
+
+    def __str__(self):
+        """ { a } -> { b } -> { c } -> NULL """
+        final_string = ""
+        current = self.head
+        while current:
+            final_string += f"{{{current.data}}} -> "
+            current = current.next
+        return f"{final_string} NULL"
