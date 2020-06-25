@@ -78,16 +78,24 @@ def left_join_hashtable(table1, table2):
     # print("this is table2", table2)
     output = []
     #iterate over the table1
-    for i in range(len(table1.map)):
-        #check for match in table2 at these spots
-        if table1.map[i] and table2.map[i]:
-            # print(table1.map[i],table2.map[i])
-            output.append(table1.map[i])
-            output.append(table2.map[i])
-        elif table1.map[i]:
-            # print(table1.map[i])
-            output.append(table1.map[i])
+    # for i in range(len(table1.map)):
+    #     #check for match in table2 at these spots
+    #     if table1.map[i] and table2.map[i]:
+    #         # print(table1.map[i],table2.map[i])
+    #         output.append(table1.map[i])
+    #         output.append(table2.map[i])
+    #     elif table1.map[i]:
+    #         # print(table1.map[i])
+    #         output.append(table1.map[i])
 
+
+    for key in table1:
+        key_word = key
+        synonym = table1[key]
+        # this will get the value in table2 for the key, .get will only get the value if it exists, if not None
+        antonym = table2.get(key, None)
+        trio = [key_word, synonym, antonym]
+        output.append(trio)
 
     return output
 
