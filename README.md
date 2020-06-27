@@ -46,5 +46,5 @@
 <!-- 32 -->
 - [Left Join](data_structures/hashtable/README.md)
 <!-- 35 -->
-- [Tree Intersection](data_structures/graphs/README.md)
+- [Graphs](data_structures/graphs/README.md)
 
