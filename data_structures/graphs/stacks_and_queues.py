@@ -58,6 +58,8 @@ class Queue():
         if self.front != None:
             temp_node = self.front
             self.front = self.front.next
+            if self.front == None:
+                self.rear = None
             temp_node.next = None
             return temp_node.value
         else:
