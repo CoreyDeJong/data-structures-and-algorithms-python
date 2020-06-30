@@ -34,6 +34,13 @@ class Graph:
         
         adjacencies.append(edge)
 
+
+        edge = Edge(start_vertex, weight)
+        adjacencies = self._adjacency_list[end_vertex] # list of neighbors
+        
+        adjacencies.append(edge)
+
+
     # gets all the keys from vertex's/nodes
     def get_vertex(self):
         return self._adjacency_list.keys()

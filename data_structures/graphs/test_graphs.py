@@ -111,12 +111,12 @@ def test_breadth2():
     pandora = g.add_vertex('pandora')
 
     g.add_edge(narnia, naboo)
-    g.add_edge(arendalle, naboo)
-    g.add_edge(pandora, arendalle)
-    g.add_edge(arendalle, narnia)
-
+    g.add_edge(narnia, arendalle)
+    g.add_edge(naboo, arendalle)
+    g.add_edge(arendalle,pandora)
+   
     actual = g.breadth_first(narnia)
-    expected = ['narnia', 'naboo']
+    expected = ['narnia', 'naboo', 'arendalle','pandora']
     assert actual == expected
 
 def test_breadth_island():
