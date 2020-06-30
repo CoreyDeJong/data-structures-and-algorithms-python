@@ -81,3 +81,57 @@ def test_get_size():
     banana = g.add_vertex('banana')
 
     assert len(g) == 2
+
+
+
+###### Code 36 : Breadth First #########
+def test_breadth1():
+    g = Graph()
+
+    pandora = g.add_vertex('pandora')
+    arendalle = g.add_vertex('arendalle')
+    narnia = g.add_vertex('narnia')
+    naboo = g.add_vertex('naboo')
+
+    g.add_edge(pandora, arendalle)
+    g.add_edge(arendalle, narnia)
+    g.add_edge(arendalle,naboo)
+    g.add_edge(narnia, naboo)
+
+    actual = g.breadth_first(pandora)
+    expected = ['pandora', 'arendalle', 'narnia', 'naboo']
+    assert actual == expected
+
+def test_breadth2():
+    g = Graph()
+
+    narnia = g.add_vertex('narnia')
+    naboo = g.add_vertex('naboo')
+    arendalle = g.add_vertex('arendalle')
+    pandora = g.add_vertex('pandora')
+
+    g.add_edge(narnia, naboo)
+    g.add_edge(arendalle, naboo)
+    g.add_edge(pandora, arendalle)
+    g.add_edge(arendalle, narnia)
+
+    actual = g.breadth_first(narnia)
+    expected = ['narnia', 'naboo']
+    assert actual == expected
+
+def test_breadth_island():
+    g = Graph()
+
+    pandora = g.add_vertex('pandora')
+    arendalle = g.add_vertex('arendalle')
+    narnia = g.add_vertex('narnia')
+    naboo = g.add_vertex('naboo')
+
+    # g.add_edge(pandora, arendalle)
+    g.add_edge(arendalle, narnia)
+    g.add_edge(arendalle,naboo)
+    g.add_edge(narnia, naboo)
+
+    actual = g.breadth_first(pandora)
+    expected = ['pandora']
+    assert actual == expected
