@@ -41,3 +41,17 @@ Efficiency is O(n) given the loop to iterate through the graph.
 ## Solution
 [Breadth First Traversal](../../assets/breadth_first.PNG)
 
+
+ # Get Edges - Graph
+Write a function based on the specifications above, which takes in a graph, and an array of city names. 
+
+## Challenge Description
+Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
+
+## Approach & Efficiency
+Efficiency is O(n^2) given the two loops to iterate through the graph.
+
+## Solution
+[Get Edges](../../assets/get_edge.PNG)
+
+

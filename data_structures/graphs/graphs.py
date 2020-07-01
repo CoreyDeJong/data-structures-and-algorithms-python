@@ -1,3 +1,5 @@
+## collaborated with multiple team members to complete this assignment and testing
+
 from stacks_and_queues import Queue
 
 
@@ -17,28 +19,28 @@ class Graph:
 
     def add_vertex(self, value):
         v = Vertex(value)
-        self._adjacency_list[v] = []
+        self._adjacency_list[v.value] = []
         return v
 
     def add_edge(self, start_vertex, end_vertex, weight=1):
         
-        if start_vertex not in self._adjacency_list:
+        if start_vertex.value not in self._adjacency_list:
             raise KeyError('Start Vertex not in graph')
 
-        if end_vertex not in self._adjacency_list:
+        if end_vertex.value not in self._adjacency_list:
             raise KeyError('End Vertex not in graph')
 
         edge = Edge(end_vertex, weight)
 
-        adjacencies = self._adjacency_list[start_vertex] # list of neighbors
+        adjacencies = self._adjacency_list[start_vertex.value] # list of neighbors
         
         adjacencies.append(edge)
 
 
-        edge = Edge(start_vertex, weight)
-        adjacencies = self._adjacency_list[end_vertex] # list of neighbors
+        edge2 = Edge(start_vertex, weight)
+        adjacencies = self._adjacency_list[end_vertex.value] # list of neighbors
         
-        adjacencies.append(edge)
+        adjacencies.append(edge2)
 
 
     # gets all the keys from vertex's/nodes
@@ -47,7 +49,8 @@ class Graph:
 
     # neighbors are vertex/nodes that are edge/connected to each other
     def get_neighbors(self, vertex):
-        return self._adjacency_list.get(vertex, [])
+        # return self._adjacency_list.get(vertex, [])
+        return self._adjacency_list[vertex]
 
     
     def __len__(self):
@@ -90,17 +93,17 @@ class Edge:
         self.weight = weight
 
 
-g = Graph()
+# g = Graph()
 
-pandora = g.add_vertex('pandora')
-arendalle = g.add_vertex('arendalle')
-narnia = g.add_vertex('narnia')
-naboo = g.add_vertex('naboo')
+# pandora = g.add_vertex('pandora')
+# arendalle = g.add_vertex('arendalle')
+# narnia = g.add_vertex('narnia')
+# naboo = g.add_vertex('naboo')
 
-g.add_edge(pandora, arendalle)
-g.add_edge(arendalle, narnia)
-g.add_edge(arendalle,naboo)
-g.add_edge(narnia, naboo)
+# g.add_edge(pandora, arendalle)
+# g.add_edge(arendalle, narnia)
+# g.add_edge(arendalle,naboo)
+# g.add_edge(narnia, naboo)
 
-actual = g.breadth_first(pandora)
-print(actual)
+# actual = g.breadth_first(pandora)
+# print(actual)
