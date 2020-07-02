@@ -31,7 +31,6 @@ BigO is O(n) given the length of the graphs are unknown
  # Breadth-first Traversal - Graph
 Implement a breadth-first traversal on a graph.
 
-
 ## Challenge Description
 Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
 
@@ -53,5 +52,20 @@ Efficiency is O(n^2) given the two loops to iterate through the graph.
 
 ## Solution
 [Get Edges](../../assets/get_edge.PNG)
+
+
+
+ # Depth-first Traversal - Graph
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. 
+
+## Challenge Description
+Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+Efficiency is O(n) given the loop to iterate through the graph.
+
+## Solution
+[Depth First Traversal](../../assets/depth_first.PNG)
+
 
 
