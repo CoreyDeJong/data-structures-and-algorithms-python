@@ -1,13 +1,6 @@
 ## collaborated with multiple team members to complete this assignment and testing
 
-from stacks_and_queues import Queue
-
-
-# enqueue = Queue.enqueue()
-# dequeue = Queue.dequeue()
-
-
-
+from stacks_and_queues import *
 
 class Graph:
     
@@ -76,6 +69,36 @@ class Graph:
                         breadth.enqueue(edge.vertex)
         
         return nodes
+
+
+    def depth_first(self, vertex):
+        output = []
+        stack = Stack()
+        vertex = Vertex(vertex)
+        # deal with the root first
+        stack.push(vertex)
+        output.append(vertex.value)
+       
+
+        while stack.is_empty() == False:
+            top = stack.peek() # top = vertex a
+            top.visited = True 
+            counter = 0
+
+            for child in self.get_neighbors(top.value):
+                if child.vertex.value not in output:
+                    # child.vertex.visited = True
+                    stack.push(child.vertex)
+                    output.append(child.vertex.value)
+                    counter +=1
+                    
+
+            # if visited == True:
+            #     continue
+            if top.visited == True and counter == 0:
+                stack.pop()
+
+        return output
 
 
 # creates Vertex/Nodes

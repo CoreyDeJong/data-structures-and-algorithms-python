@@ -24,8 +24,6 @@ class Stack():
             pop_node.next = None
             return pop_node.value
 
-
-
     def peek(self):
         if self.top != None:
             return self.top.value

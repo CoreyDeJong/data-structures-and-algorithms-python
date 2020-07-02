@@ -195,3 +195,65 @@ def test_edge_4():
     expected = [False, '$0']
     actual = get_edge(maps, ['Narnia', 'Arendelle', 'Naboo'])
     assert actual == expected
+
+
+
+
+
+###### Code 38 : Depth First #########
+def test_depth1():
+    g = Graph()
+
+    A = g.add_vertex('A')
+    B = g.add_vertex('B')
+    C = g.add_vertex('C')
+    D = g.add_vertex('D')
+    G = g.add_vertex('G')
+
+    g.add_edge(A,B)
+    g.add_edge(B,D)
+    g.add_edge(A,D)
+    g.add_edge(B,C)
+    g.add_edge(C,G)
+
+    actual = g.depth_first('A')
+    expected = ['A','B','D','C','G']
+    assert actual == expected
+
+def test_depth2():
+    g = Graph()
+
+    A = g.add_vertex('A')
+    B = g.add_vertex('B')
+    C = g.add_vertex('C')
+    D = g.add_vertex('D')
+    G = g.add_vertex('G')
+
+    g.add_edge(A,B)
+    g.add_edge(B,D)
+    g.add_edge(A,D)
+    g.add_edge(B,C)
+    g.add_edge(C,G)
+
+    actual = g.depth_first('G')
+    expected = ['G','C','B','A','D']
+    assert actual == expected
+
+def test_depth3():
+    g = Graph()
+
+    A = g.add_vertex('A')
+    B = g.add_vertex('B')
+    C = g.add_vertex('C')
+    D = g.add_vertex('D')
+    G = g.add_vertex('G')
+
+    g.add_edge(A,B)
+    g.add_edge(B,D)
+    g.add_edge(A,D)
+    g.add_edge(B,C)
+ 
+
+    actual = g.depth_first('G')
+    expected = ['G']
+    assert actual == expected
