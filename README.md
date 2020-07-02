@@ -51,3 +51,5 @@
 - [Breadth First](data_structures/graphs/README.md)
 <!-- 37 -->
 - [Get Edges](data_structures/graphs/README.md)
+<!-- 38 -->
+- [Depth First](data_structures/graphs/README.md)
